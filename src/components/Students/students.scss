@@ -3,9 +3,11 @@
 .Students {
   margin: 50px 0;
 }
+
 .SingleStudent {
   margin: 10px 0;
   .wrapStudent {
+    border-radius: 3px;
     border-top: 6px solid $main-color;
     background-color: lighten($main-color, 50%);
     padding: 40px 15px;
@@ -13,5 +15,15 @@
   img {
     height: 50px;
     margin: 10px 0;
+  }
+}
+
+.StudentOptions {
+  border-radius: 5px;
+  background-color: $main-color;
+  color: $light-color;
+  padding: 10px;
+  p {
+    margin-bottom: 0;
   }
 }

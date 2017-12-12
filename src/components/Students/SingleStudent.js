@@ -1,4 +1,7 @@
 import React from 'react';
+
+import StudentOptions from './StudentOptions';
+
 import './students.scss';
 
 let temporaryImg = 'http://www.freeiconspng.com/uploads/no-image-icon-13.png';
@@ -12,6 +15,7 @@ const SingleStudent = (props) => {
             <div className="wrapStudent col-md-10 offset-md-1 text-center">
                 <img className="img-responsive" src={temporaryImg} />
                 <p>{ firstName + ' ' + lastName }</p>
+                <StudentOptions />
             </div>
         </div>
     );
