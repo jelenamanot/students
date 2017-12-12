@@ -1,6 +1,8 @@
 import React from 'react';
 
-import studentService  from '../services/studentService'
+import studentService  from '../services/studentService';
+
+import Students from './Students/Students'
 
 class App extends React.Component {
    constructor() {
@@ -18,15 +20,12 @@ class App extends React.Component {
            .catch(error => {
                console.log(error);
            });
-
    }
 
-
    render() {
-       console.log(this.state.students)
        return(
-         <div>
-            <p>Students</p>
+         <div className="container-fluid">
+            <Students students={this.state.students} />
          </div>
       );
    }
