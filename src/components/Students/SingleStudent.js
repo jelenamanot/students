@@ -9,7 +9,7 @@ let temporaryImg = 'http://www.freeiconspng.com/uploads/no-image-icon-13.png';
 
 const SingleStudent = (props) => {
 
-    const { firstName, lastName } = props.student;
+    const { firstName, lastName, attendanceMark } = props.student;
 
     // debugger
 
@@ -18,7 +18,7 @@ const SingleStudent = (props) => {
             <div className="wrapStudent col-md-10 offset-md-1 text-center">
                 <img className="img-responsive" src={temporaryImg} />
                 <p>{ firstName + ' ' + lastName }</p>
-                <StudentOptions />
+                <StudentOptions attendanceMark={attendanceMark} />
             </div>
         </div>
     );

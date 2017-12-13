@@ -1,29 +1,53 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { MdDone, MdAccessTime, MdClear } from 'react-icons/md';
 
 import '../Students/students.scss';
 
 import './studentOptions.scss';
 
-const StudentOptions = () => {
+const StudentOptions = (props) => {
+
+    const presentMark = props.attendanceMark.present;
+    const lateMark = props.attendanceMark.late;
+    const absentMark = props.attendanceMark.absent;
+
+    let presentColor;
+    let lateColor;
+    let absentColor;
+
+    if(presentMark === true) {
+        presentColor = '#3cb554';
+    }
+    if(lateMark === true) {
+        lateColor = '#b57031';
+    }
+    if(absentMark === true) {
+        absentColor = '#bc2c2c';
+    }
+
     return (
         <div className="StudentOptions">
             <div className="row">
                 {/* present */}
                 <div className="col-md-4">
-                    <MdDone size={20} className="optionSign present" />
+                    <MdDone size={20} className="optionSign present" color={presentColor} />
                 </div>
                 {/* late */}
                 <div className="col-md-4">
-                    <MdAccessTime size={20} className="optionSign late" />
+                    <MdAccessTime size={20} className="optionSign late" color={lateColor} />
                 </div>
                 {/* absent */}
                 <div className="col-md-4">
-                    <MdClear size={20} className="optionSign absent" />
+                    <MdClear size={20} className="optionSign absent" color={absentColor} />
                 </div>
             </div>
         </div>
     );
+};
+
+StudentOptions.propTypes = {
+    attendanceMark: PropTypes.object
 };
 
 export default StudentOptions;
