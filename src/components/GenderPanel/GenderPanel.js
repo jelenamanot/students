@@ -1,4 +1,7 @@
 import React from 'react';
+import { FaFemale, FaMale } from 'react-icons/fa';
+
+import { femaleColor, maleColor } from "../../utils/constants";
 
 import './genderPanel.scss';
 
@@ -10,8 +13,14 @@ const GenderPanel = (props) => {
 
     return(
         <div className="GenderPanel basicCard">
-            <div className="panelPart">Female: {femaleStudents.length}</div>
-            <div className="panelPart">Male: {maleStudents.length}</div>
+            <div className="panelPart">
+                <FaFemale size={30} color={femaleColor} />
+                <span className="genderSpan">{femaleStudents.length}</span>
+            </div>
+            <div className="panelPart">
+                <FaMale size={30} color={maleColor} />
+                <span className="genderSpan">{maleStudents.length}</span>
+            </div>
         </div>
     );
 };

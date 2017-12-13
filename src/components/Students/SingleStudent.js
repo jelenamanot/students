@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 
 import { FaFemale, FaMale } from 'react-icons/fa';
 
+import { femaleColor, maleColor } from '../../utils/constants';
+
 import StudentOptions from '../StudentOptions/StudentOptions';
 
 import './students.scss';
@@ -23,8 +25,8 @@ const SingleStudent = (props) => {
                 <div className="studentGender">
                     {
                         gender === 'female' ?
-                            <FaFemale color={'#a52770'} size={20} />  :
-                            <FaMale color={'#223f9c'} size={20} />
+                            <FaFemale color={femaleColor} size={20} />  :
+                            <FaMale color={maleColor} size={20} />
                     }
                 </div>
                 <StudentOptions attendanceMark={attendanceMark} />

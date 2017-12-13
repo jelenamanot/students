@@ -31,7 +31,7 @@ class Students extends React.Component {
         return(
             <div className="Students">
                 <div className="panels row">
-                    <div className="col-md-4 offset-md-2">
+                    <div className="col-md-2 offset-md-2">
                         <GenderPanel students={students} />
                     </div>
                     <div className="col-md-4">
