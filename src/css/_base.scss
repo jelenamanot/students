@@ -1,7 +1,6 @@
 html {
   height: 100%;
   body {
-    background-color: $light-color;
     color: $dark-color;
     background: #1e5799; /* Old browsers */
     background: -moz-linear-gradient(top, #1e5799 0%, #204477 0%, #00a991 0%, #207cca 0%, #00a991 99%); /* FF3.6-15 */
@@ -11,5 +10,6 @@ html {
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    font-family: $font-sans;
   }
 }
