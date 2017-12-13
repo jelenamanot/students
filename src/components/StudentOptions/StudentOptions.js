@@ -17,10 +17,10 @@ const StudentOptions = (props) => {
     let absentColor;
 
     if(presentMark === true) {
-        presentColor = '#3cb554';
+        presentColor = '#01a191';
     }
     if(lateMark === true) {
-        lateColor = '#b57031';
+        lateColor = '#1080bc';
     }
     if(absentMark === true) {
         absentColor = '#bc2c2c';
