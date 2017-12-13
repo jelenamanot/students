@@ -17,7 +17,7 @@ const SingleStudent = (props) => {
 
     return(
         <div className="SingleStudent col-md-3 col-sm-6">
-            <div className="wrapStudent col-md-10 offset-md-1 text-center">
+            <div className="basicCard col-md-10 offset-md-1 text-center">
                 <img className="studentImg img-responsive" src={image} />
                 <p className="studentName">{ firstName + ' ' + lastName }</p>
                 <div className="studentGender">
