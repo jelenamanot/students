@@ -1,6 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { FaFemale, FaMale } from 'react-icons/fa';
+
+import { femaleColor, maleColor } from '../../utils/constants';
+
 import StudentOptions from '../StudentOptions/StudentOptions';
 
 import './students.scss';
@@ -9,15 +13,22 @@ import './students.scss';
 
 const SingleStudent = (props) => {
 
-    const { firstName, lastName, attendanceMark, image } = props.student;
+    const { firstName, lastName, attendanceMark, image, gender } = props.student;
 
     // debugger
 
     return(
         <div className="SingleStudent col-md-3 col-sm-6">
-            <div className="wrapStudent col-md-10 offset-md-1 text-center">
+            <div className="basicCard col-md-10 offset-md-1 text-center">
                 <img className="studentImg img-responsive" src={image} />
                 <p className="studentName">{ firstName + ' ' + lastName }</p>
+                <div className="studentGender">
+                    {
+                        gender === 'female' ?
+                            <FaFemale color={femaleColor} size={20} />  :
+                            <FaMale color={maleColor} size={20} />
+                    }
+                </div>
                 <StudentOptions attendanceMark={attendanceMark} />
             </div>
         </div>

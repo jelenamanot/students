@@ -2,16 +2,13 @@
 
 .Students {
   margin: 40px 0;
+  .panels {
+    margin-bottom: 40px;
+  }
 }
 
 .SingleStudent {
   margin: 15px 0;
-  .wrapStudent {
-    box-shadow: $my-box-shadow;
-    border-radius: 3px;
-    background-color: $light-color;
-    padding: 40px 15px;
-  }
   .studentImg {
     height: 90px;
     border-radius: 50%;
@@ -20,5 +17,9 @@
   }
   .studentName {
     color: darken($main-color, 10%);
+    letter-spacing: 1px;
+  }
+  .studentGender {
+    margin-bottom: 16px;
   }
 }
