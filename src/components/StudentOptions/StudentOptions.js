@@ -1,4 +1,5 @@
 import React from 'react';
+import { MdDone, MdAccessTime, MdClear } from 'react-icons/md';
 
 import '../Students/students.scss';
 
@@ -8,14 +9,17 @@ const StudentOptions = () => {
     return (
         <div className="StudentOptions">
             <div className="row">
+                {/* present */}
                 <div className="col-md-4">
-                    <p>#</p>
+                    <MdDone size={20} className="optionSign present" />
                 </div>
+                {/* late */}
                 <div className="col-md-4">
-                    <p>#</p>
+                    <MdAccessTime size={20} className="optionSign late" />
                 </div>
+                {/* absent */}
                 <div className="col-md-4">
-                    <p>#</p>
+                    <MdClear size={20} className="optionSign absent" />
                 </div>
             </div>
         </div>

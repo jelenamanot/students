@@ -6,7 +6,11 @@
   color: $dark-color;
   box-shadow: $my-box-shadow-two;
   padding: 10px;
-  p {
-    margin-bottom: 0;
+  .optionSign {
+    transition: color 0.3s ease;
+    cursor: pointer;
   }
+  .present:hover { color: $present; }
+  .late:hover { color: $late; }
+  .absent:hover { color: $absent; }
 }
