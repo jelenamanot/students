@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import StudentOptions from './StudentOptions';
 
@@ -19,6 +20,11 @@ const SingleStudent = (props) => {
             </div>
         </div>
     );
+};
+
+SingleStudent.propTypes = {
+    firstName: PropTypes.string,
+    lastName: PropTypes.string
 };
 
 export default SingleStudent;

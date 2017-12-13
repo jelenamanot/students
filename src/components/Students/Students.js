@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import SingleStudent from './SingleStudent';
 
@@ -18,5 +19,9 @@ class Students extends React.Component {
         );
     }
 }
+
+Students.propTypes = {
+    students: PropTypes.array
+};
 
 export default Students;
