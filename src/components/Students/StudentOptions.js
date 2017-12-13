@@ -18,6 +18,6 @@ const StudentOptions = () => {
             </div>
         </div>
     );
-}
+};
 
 export default StudentOptions;
