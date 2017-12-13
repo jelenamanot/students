@@ -14,7 +14,7 @@ const SingleStudent = (props) => {
     // debugger
 
     return(
-        <div className="SingleStudent col-md-3">
+        <div className="SingleStudent col-md-3 col-sm-6">
             <div className="wrapStudent col-md-10 offset-md-1 text-center">
                 <img className="studentImg img-responsive" src={image} />
                 <p>{ firstName + ' ' + lastName }</p>
