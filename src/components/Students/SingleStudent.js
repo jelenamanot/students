@@ -9,7 +9,9 @@ let temporaryImg = 'http://www.freeiconspng.com/uploads/no-image-icon-13.png';
 
 const SingleStudent = (props) => {
 
-    const { firstName, lastName } = props;
+    const { firstName, lastName } = props.student;
+
+    // debugger
 
     return(
         <div className="SingleStudent col-md-3">
@@ -23,8 +25,7 @@ const SingleStudent = (props) => {
 };
 
 SingleStudent.propTypes = {
-    firstName: PropTypes.string,
-    lastName: PropTypes.string
+    student: PropTypes.object
 };
 
 export default SingleStudent;
