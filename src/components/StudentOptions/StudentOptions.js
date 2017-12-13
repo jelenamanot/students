@@ -1,6 +1,8 @@
 import React from 'react';
 
-import './students.scss';
+import '../Students/students.scss';
+
+import './studentOptions.scss';
 
 const StudentOptions = () => {
     return (
