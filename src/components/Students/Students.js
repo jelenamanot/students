@@ -5,6 +5,7 @@ import studentService from '../../services/studentService';
 
 import SingleStudent from './SingleStudent';
 import GenderPanel from '../GenderPanel/GenderPanel';
+import StatusPanel from '../StatusPanel/StatusPanel';
 
 
 class Students extends React.Component {
@@ -14,28 +15,44 @@ class Students extends React.Component {
         this.state = {
             students: []
         };
+        this.onStudentStatusUpdate = this.onStudentStatusUpdate.bind(this);
+
     }
 
     componentWillMount() {
         studentService.getAllData()
             .then(response => {
-                this.setState({ students: response.data.results });
+                this.setState({ students: response.data });
             })
             .catch(error => {
                 console.log(error);
             });
     }
 
+    onStudentStatusUpdate(studentId, attendanceMark) {
+        const students = this.state.students.map(student => {
+            if(student.id === studentId) {
+                return Object.assign(student, {
+                    attendanceMark
+                });
+            }
+            return student;
+        });
+
+        this.setState({ students });
+    }
+
     render() {
         const students = this.state.students;
         return(
             <div className="Students">
+
                 <div className="panels row">
-                    <div className="col-md-2 offset-md-2">
+                    <div className="col-lg-2 offset-lg-2">
                         <GenderPanel students={students} />
                     </div>
-                    <div className="col-md-4">
-                        <p>panel</p>
+                    <div className="col-lg-6">
+                        <StatusPanel students={students} />
                     </div>
                 </div>
 
@@ -44,6 +61,7 @@ class Students extends React.Component {
                         students.map(student => <SingleStudent
                             key={student.id}
                             student={student}
+                            onStudentStatusUpdate={this.onStudentStatusUpdate}
                         />)
                     }
                 </div>

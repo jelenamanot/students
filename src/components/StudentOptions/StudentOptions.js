@@ -26,19 +26,38 @@ const StudentOptions = (props) => {
         absentColor = '#bc2c2c';
     }
 
+    const setAttendance = (id, status) => {
+        const newState = {
+            'present': false,
+            'late': false,
+            'absent': false
+        };
+
+        /*
+            Check if attendance button has already been clicked,
+            if not, set the clicked status to true
+        */
+
+        if (!props.attendanceMark[status]) {
+            newState[status] = true;
+        }
+
+        props.onStudentStatusUpdate(id, newState);
+    };
+
     return (
         <div className="StudentOptions">
             <div className="row">
                 {/* present */}
-                <div className="col-md-4">
+                <div className="col-lg-4" onClick={setAttendance.bind(this, props.id, 'present')}>
                     <MdDone size={20} className="optionSign present" color={presentColor} />
                 </div>
                 {/* late */}
-                <div className="col-md-4">
+                <div className="col-lg-4" onClick={setAttendance.bind(this, props.id, 'late')}>
                     <MdAccessTime size={20} className="optionSign late" color={lateColor} />
                 </div>
                 {/* absent */}
-                <div className="col-md-4">
+                <div className="col-lg-4" onClick={setAttendance.bind(this, props.id, 'absent')}>
                     <MdClear size={20} className="optionSign absent" color={absentColor} />
                 </div>
             </div>
@@ -47,7 +66,9 @@ const StudentOptions = (props) => {
 };
 
 StudentOptions.propTypes = {
-    attendanceMark: PropTypes.object
+    attendanceMark: PropTypes.object,
+    onStudentStatusUpdate: PropTypes.func,
+    id: PropTypes.number
 };
 
 export default StudentOptions;
