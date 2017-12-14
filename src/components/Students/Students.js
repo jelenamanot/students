@@ -19,7 +19,8 @@ class Students extends React.Component {
     componentWillMount() {
         studentService.getAllData()
             .then(response => {
-                this.setState({ students: response.data.results });
+                // console.log(response);
+                this.setState({ students: response.data });
             })
             .catch(error => {
                 console.log(error);
