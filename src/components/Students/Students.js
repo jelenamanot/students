@@ -15,6 +15,8 @@ class Students extends React.Component {
         this.state = {
             students: []
         };
+        this.onStudentStatusUpdate = this.onStudentStatusUpdate.bind(this);
+
     }
 
     componentWillMount() {
@@ -25,6 +27,19 @@ class Students extends React.Component {
             .catch(error => {
                 console.log(error);
             });
+    }
+
+    onStudentStatusUpdate(studentId, attendanceMark) {
+        const students = this.state.students.map(student => {
+            if(student.id === studentId) {
+                return Object.assign(student, {
+                    attendanceMark
+                });
+            }
+            return student;
+        });
+
+        this.setState({ students });
     }
 
     render() {
@@ -46,6 +61,7 @@ class Students extends React.Component {
                         students.map(student => <SingleStudent
                             key={student.id}
                             student={student}
+                            onStudentStatusUpdate={this.onStudentStatusUpdate}
                         />)
                     }
                 </div>

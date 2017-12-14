@@ -8,20 +8,28 @@ import './genderPanel.scss';
 
 const GenderPanel = (props) => {
 
-    let students = props.students;
-    let femaleStudents = students.filter(student => student.gender === 'female');
-    let maleStudents = students.filter(student => student.gender === 'male');
+    let femaleStudents = 0;
+    let maleStudents = 0;
+
+    props.students.forEach(student => {
+        if(student.gender === 'female') {
+            femaleStudents++;
+        }
+        else {
+            maleStudents++;
+        }
+    });
 
     return(
         <div className="GenderPanel basicCard">
             <p className="miniHeading">Gender</p>
             <div className="panelPart">
                 <FaFemale size={30} color={femaleColor} />
-                <span className="genderSpan">{femaleStudents.length}</span>
+                <span className="genderSpan">{ femaleStudents }</span>
             </div>
             <div className="panelPart">
                 <FaMale size={30} color={maleColor} />
-                <span className="genderSpan">{maleStudents.length}</span>
+                <span className="genderSpan">{ maleStudents }</span>
             </div>
         </div>
     );

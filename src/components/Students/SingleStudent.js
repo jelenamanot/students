@@ -13,7 +13,7 @@ import './students.scss';
 
 const SingleStudent = (props) => {
 
-    const { firstName, lastName, attendanceMark, image, gender } = props.student;
+    const { firstName, lastName, attendanceMark, image, gender, id } = props.student;
 
     // debugger
 
@@ -29,14 +29,19 @@ const SingleStudent = (props) => {
                             <FaMale color={maleColor} size={20} />
                     }
                 </div>
-                <StudentOptions attendanceMark={attendanceMark} />
+                <StudentOptions
+                    attendanceMark={attendanceMark}
+                    onStudentStatusUpdate={props.onStudentStatusUpdate}
+                    id={id}
+                />
             </div>
         </div>
     );
 };
 
 SingleStudent.propTypes = {
-    student: PropTypes.object
+    student: PropTypes.object,
+    onStudentStatusUpdate: PropTypes.func
 };
 
 export default SingleStudent;
