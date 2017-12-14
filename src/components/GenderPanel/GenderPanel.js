@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { FaFemale, FaMale } from 'react-icons/fa';
 
-import { femaleColor, maleColor } from "../../utils/constants";
+import { femaleColor, maleColor } from '../../utils/constants';
 
 import './genderPanel.scss';
 
@@ -13,6 +14,7 @@ const GenderPanel = (props) => {
 
     return(
         <div className="GenderPanel basicCard">
+            <p className="miniHeading">Gender</p>
             <div className="panelPart">
                 <FaFemale size={30} color={femaleColor} />
                 <span className="genderSpan">{femaleStudents.length}</span>
@@ -23,6 +25,10 @@ const GenderPanel = (props) => {
             </div>
         </div>
     );
+};
+
+GenderPanel.propTypes = {
+    students: PropTypes.array
 };
 
 export default GenderPanel;

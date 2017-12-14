@@ -5,6 +5,7 @@ import studentService from '../../services/studentService';
 
 import SingleStudent from './SingleStudent';
 import GenderPanel from '../GenderPanel/GenderPanel';
+import StatusPanel from '../StatusPanel/StatusPanel';
 
 
 class Students extends React.Component {
@@ -19,7 +20,6 @@ class Students extends React.Component {
     componentWillMount() {
         studentService.getAllData()
             .then(response => {
-                // console.log(response);
                 this.setState({ students: response.data });
             })
             .catch(error => {
@@ -31,12 +31,13 @@ class Students extends React.Component {
         const students = this.state.students;
         return(
             <div className="Students">
+
                 <div className="panels row">
-                    <div className="col-md-2 offset-md-2">
+                    <div className="col-lg-2 offset-lg-2">
                         <GenderPanel students={students} />
                     </div>
-                    <div className="col-md-4">
-                        <p>panel</p>
+                    <div className="col-lg-6">
+                        <StatusPanel students={students} />
                     </div>
                 </div>
 

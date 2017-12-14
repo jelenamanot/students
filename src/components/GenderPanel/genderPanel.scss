@@ -8,12 +8,12 @@
       font-weight: 600;
       margin-left: 15px;
     }
-    &:first-child {
-      border: 1px solid deeppink;
+    &:nth-child(2){
+      border: 1px solid $femaleColor;
       margin-bottom: 2%;
     }
-    &:nth-child(2) {
-      border: 1px solid blue;
+    &:nth-child(3) {
+      border: 1px solid $maleColor;
     }
   }
 }

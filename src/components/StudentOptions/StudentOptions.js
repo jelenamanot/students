@@ -30,15 +30,15 @@ const StudentOptions = (props) => {
         <div className="StudentOptions">
             <div className="row">
                 {/* present */}
-                <div className="col-md-4">
+                <div className="col-lg-4">
                     <MdDone size={20} className="optionSign present" color={presentColor} />
                 </div>
                 {/* late */}
-                <div className="col-md-4">
+                <div className="col-lg-4">
                     <MdAccessTime size={20} className="optionSign late" color={lateColor} />
                 </div>
                 {/* absent */}
-                <div className="col-md-4">
+                <div className="col-lg-4">
                     <MdClear size={20} className="optionSign absent" color={absentColor} />
                 </div>
             </div>
