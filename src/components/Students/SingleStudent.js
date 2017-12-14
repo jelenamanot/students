@@ -18,7 +18,7 @@ const SingleStudent = (props) => {
     // debugger
 
     return(
-        <div className="SingleStudent col-md-3 col-sm-6">
+        <div className="SingleStudent col-lg-3">
             <div className="basicCard col-md-10 offset-md-1 text-center">
                 <img className="studentImg img-responsive" src={image} />
                 <p className="studentName">{ firstName + ' ' + lastName }</p>
