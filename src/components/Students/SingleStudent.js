@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import { Link } from 'react-router-dom';
+
 import { FaFemale, FaMale } from 'react-icons/fa';
 
 import { femaleColor, maleColor } from '../../utils/constants';
@@ -8,8 +10,6 @@ import { femaleColor, maleColor } from '../../utils/constants';
 import StudentOptions from '../StudentOptions/StudentOptions';
 
 import './students.scss';
-
-// let temporaryImg = 'http://www.freeiconspng.com/uploads/no-image-icon-13.png';
 
 const SingleStudent = (props) => {
 
@@ -20,7 +20,9 @@ const SingleStudent = (props) => {
     return(
         <div className="SingleStudent col-lg-3">
             <div className="basicCard col-md-10 offset-md-1 text-center">
-                <img className="studentImg img-responsive" src={image} />
+                <Link to={`/student/${id}`}>
+                    <img className="studentImg" src={image} />
+                </Link>
                 <p className="studentName">{ firstName + ' ' + lastName }</p>
                 <div className="studentGender">
                     {
