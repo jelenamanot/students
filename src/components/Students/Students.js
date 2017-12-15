@@ -19,7 +19,7 @@ class Students extends React.Component {
 
     }
 
-    componentWillMount() {
+    componentDidMount() {
         studentService.getAllData()
             .then(response => {
                 this.setState({ students: response.data });

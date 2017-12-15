@@ -40,6 +40,7 @@ const StudentOptions = (props) => {
 
         if (!props.attendanceMark[status]) {
             newState[status] = true;
+            // newState['present' | 'late' | 'absent']
         }
 
         props.onStudentStatusUpdate(id, newState);
