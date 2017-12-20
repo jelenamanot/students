@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Link } from 'react-router-dom';
-
 import { FaFemale, FaMale } from 'react-icons/fa';
 
-import { femaleColor, maleColor } from '../../utils/constants';
+import { femaleColor, maleColor } from '../../../utils/constants';
 
 import StudentOptions from '../StudentOptions/StudentOptions';
 
@@ -15,14 +13,10 @@ const SingleStudent = (props) => {
 
     const { firstName, lastName, attendanceMark, image, gender, id } = props.student;
 
-    // debugger
-
     return(
         <div className="SingleStudent col-lg-3">
             <div className="basicCard col-md-10 offset-md-1 text-center">
-                <Link to={`/student/${id}`}>
-                    <img className="studentImg" src={image} />
-                </Link>
+                <img className="studentImg" src={image} />
                 <p className="studentName">{ firstName + ' ' + lastName }</p>
                 <div className="studentGender">
                     {

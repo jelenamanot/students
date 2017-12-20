@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { MdDone, MdAccessTime, MdClear } from 'react-icons/md';
 
-import '../Students/students.scss';
-
 import './studentOptions.scss';
 
 const StudentOptions = (props) => {

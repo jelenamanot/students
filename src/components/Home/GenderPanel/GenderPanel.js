@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FaFemale, FaMale } from 'react-icons/fa';
 
-import { femaleColor, maleColor } from '../../utils/constants';
+import { femaleColor, maleColor } from '../../../utils/constants';
 
 import './genderPanel.scss';
 

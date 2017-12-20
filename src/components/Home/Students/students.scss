@@ -1,4 +1,4 @@
-@import '../../css/variables';
+@import '../../../css/variables';
 
 .Students {
   margin: 40px 0;
@@ -9,12 +9,6 @@
 
 .SingleStudent {
   margin: 15px 0;
-  .studentImg {
-    height: 90px;
-    border-radius: 50%;
-    margin: 10px 0;
-    filter: grayscale(100%);
-  }
   .studentName {
     color: darken($main-color, 10%);
     letter-spacing: 1px;
@@ -22,8 +16,4 @@
   .studentGender {
     margin-bottom: 16px;
   }
-}
-
-.StudentPage {
-  color: $light-color;
 }
