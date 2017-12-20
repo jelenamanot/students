@@ -37,7 +37,7 @@ class StudentsPage extends React.Component {
                     {
                         this.state.students.map(student => (
                             <Link
-                                className="col-md-2"
+                                className="col-md-2 col-sm-4 col-6"
                                 to={`${this.props.match.path}/${student.id}`}
                                 key={student.id}
                             >
