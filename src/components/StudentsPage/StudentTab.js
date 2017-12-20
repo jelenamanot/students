@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import studentService from '../../services/studentService';
 
 import { FaFemale, FaMale } from 'react-icons/fa';
@@ -70,5 +71,9 @@ class StudentTab extends React.Component {
         );
     }
 }
+
+StudentTab.propTypes = {
+    match: PropTypes.object
+};
 
 export default StudentTab;
