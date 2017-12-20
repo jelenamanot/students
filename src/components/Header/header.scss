@@ -3,4 +3,15 @@
 .Header {
   margin-top: 40px;
   color: $light-color;
+  nav {
+    ul li {
+      display: inline;
+      a {
+        color: $light-color;
+        text-decoration: none;
+        margin-right: 10px;
+        text-transform: uppercase;
+      }
+    }
+  }
 }

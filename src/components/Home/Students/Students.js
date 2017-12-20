@@ -1,12 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-import studentService from '../../services/studentService';
+import studentService from '../../../services/studentService';
 
 import SingleStudent from './SingleStudent';
 import GenderPanel from '../GenderPanel/GenderPanel';
 import StatusPanel from '../StatusPanel/StatusPanel';
-
 
 class Students extends React.Component {
 
@@ -16,7 +14,6 @@ class Students extends React.Component {
             students: []
         };
         this.onStudentStatusUpdate = this.onStudentStatusUpdate.bind(this);
-
     }
 
     componentDidMount() {
@@ -46,7 +43,6 @@ class Students extends React.Component {
         const students = this.state.students;
         return(
             <div className="Students">
-
                 <div className="panels row">
                     <div className="col-lg-2 offset-lg-2">
                         <GenderPanel students={students} />
@@ -55,17 +51,13 @@ class Students extends React.Component {
                         <StatusPanel students={students} />
                     </div>
                 </div>
-
-                <div className="row">
-                    {
-                        students.map(student => <SingleStudent
-                            key={student.id}
-                            student={student}
-                            onStudentStatusUpdate={this.onStudentStatusUpdate}
-                        />)
-                    }
+                <div className="row">{students.map(student =>
+                    <SingleStudent
+                        key={student.id}
+                        student={student}
+                        onStudentStatusUpdate={this.onStudentStatusUpdate}
+                    />)}
                 </div>
-
             </div>
         );
     }

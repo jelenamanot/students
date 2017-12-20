@@ -1,0 +1,24 @@
+@import '../../css/variables';
+
+.StudentsPage {
+  margin-top: 40px;
+}
+
+.StudentTab {
+  margin-top: 2%;
+  .basicCard {
+    padding: 3% 4%;
+  }
+  .studentData {
+    img {
+      border-radius: 50%;
+      width: 20%;
+    }
+    h1 {
+      color: darken($main-color, 10%);
+      font-weight: 400;
+      margin: 2% 0;
+      letter-spacing: 1px;
+    }
+  }
+}

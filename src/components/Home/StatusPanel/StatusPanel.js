@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { presentColor, lateColor, absentColor } from '../../utils/constants';
+import { presentColor, lateColor, absentColor } from '../../../utils/constants';
 
 import './statusPanel.scss';
 

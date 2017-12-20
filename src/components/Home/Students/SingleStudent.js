@@ -3,24 +3,20 @@ import PropTypes from 'prop-types';
 
 import { FaFemale, FaMale } from 'react-icons/fa';
 
-import { femaleColor, maleColor } from '../../utils/constants';
+import { femaleColor, maleColor } from '../../../utils/constants';
 
 import StudentOptions from '../StudentOptions/StudentOptions';
 
 import './students.scss';
 
-// let temporaryImg = 'http://www.freeiconspng.com/uploads/no-image-icon-13.png';
-
 const SingleStudent = (props) => {
 
     const { firstName, lastName, attendanceMark, image, gender, id } = props.student;
 
-    // debugger
-
     return(
         <div className="SingleStudent col-lg-3">
             <div className="basicCard col-md-10 offset-md-1 text-center">
-                <img className="studentImg img-responsive" src={image} />
+                <img className="studentImg" src={image} />
                 <p className="studentName">{ firstName + ' ' + lastName }</p>
                 <div className="studentGender">
                     {
