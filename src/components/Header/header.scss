@@ -3,15 +3,31 @@
 .Header {
   margin-top: 40px;
   color: $light-color;
-  nav {
-    ul li {
-      display: inline;
-      a {
-        color: $light-color;
-        text-decoration: none;
-        margin-right: 10px;
-        text-transform: uppercase;
+  .navigationDiv {
+    padding: 2% 0;
+    nav {
+      ul {
+        padding: 0;
+        li {
+          display: inline;
+          a {
+            color: $light-color;
+            text-decoration: none;
+            margin-right: 15px;
+            text-transform: uppercase;
+            border-bottom: 2px solid transparent;
+            padding: 2% 1%;
+            transition: border-bottom 0.3s ease;
+          }
+          a:hover {
+            border-bottom: 2px solid $light-color;
+          }
+          .active {
+            border-bottom: 2px solid $light-color;
+          }
+        }
       }
     }
   }
+
 }
