@@ -1,0 +1,15 @@
+@import '../../css/variables';
+
+.NotFound {
+  margin: 2% 0;
+  .basicCard {
+    padding: 8% 0;
+    button {
+      margin: 2% 0;
+      a {
+        color: $light-color;
+        text-decoration: none;
+      }
+    }
+  }
+}
